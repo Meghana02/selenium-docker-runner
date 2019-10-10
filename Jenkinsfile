@@ -11,7 +11,7 @@ pipeline {
         stage('Run Test') {
             steps {
                 //sh
-                bat "docker-compose up search-module book-flight-module"
+                bat "docker-compose up  search-moduleChrome book-flight-moduleFF"
             }
         }
 		stage('Stop Grid') {
