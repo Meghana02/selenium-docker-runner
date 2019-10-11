@@ -16,7 +16,7 @@ services:
   depends_on:
    - hub
  search-moduleFF:
-  image: meghana2013/selenium-docker
+  image: meghana2013/seleium-docker
   depends_on:
    - chrome
    - firefox
@@ -27,7 +27,7 @@ services:
   volumes:
    - ./output/search-resultFF:/usr/share/udemy/test-output 
  search-moduleChrome:
-  image: meghana2013/selenium-docker
+  image: meghana2013/seleium-docker
   depends_on:
    - chrome
    - firefox
@@ -38,7 +38,7 @@ services:
   volumes:
    - ./output/search-resultChrome:/usr/share/udemy/test-output 
  book-flight-moduleFF:
-  image: meghana2013/selenium-docker
+  image: meghana2013/seleium-docker
   depends_on:
    - chrome
    - firefox
@@ -49,7 +49,7 @@ services:
   volumes:
    - ./output/book-resultFF:/usr/share/udemy/test-output    
  book-flight-moduleChrome:
-  image: meghana2013/selenium-docker
+  image: meghana2013/seleium-docker
   depends_on:
    - chrome
    - firefox
