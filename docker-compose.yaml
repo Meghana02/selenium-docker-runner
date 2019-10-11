@@ -36,7 +36,7 @@ services:
    - HUB_HOST=hub
    - MODULE=search-module.xml
   volumes:
-   - .output/search-resultChrome:/usr/share/udemy/test-output 
+   - ./output/search-resultChrome:/usr/share/udemy/test-output 
  book-flight-moduleFF:
   image: meghana2013/seleium-docker
   depends_on:
