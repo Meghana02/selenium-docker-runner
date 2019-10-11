@@ -14,11 +14,12 @@ pipeline {
                 bat "docker-compose up  search-moduleChrome book-flight-moduleFF"
             }
         }
-		stage('Stop Grid') {
-            steps {
-                //sh
-                bat "docker-compose down"
-            }
-        }
      }
+	 post{
+		always{
+			archiveArtifacts artifacts:'output/**'
+			bat "docker-compose down"
+		}
+		
+	}
 }

@@ -2,8 +2,6 @@ version: "3"
 services:
  hub:
   image: selenium/hub:3.14
-  ports:
-   - "4444:4444"
  chrome:
   image: selenium/node-chrome:3.14
   depends_on:
@@ -27,7 +25,7 @@ services:
    - HUB_HOST=hub
    - MODULE=search-module.xml
   volumes:
-   - ./search-resultFF:/usr/share/udemy/test-output 
+   - ./output/search-resultFF:/usr/share/udemy/test-output 
  search-moduleChrome:
   image: meghana2013/seleium-docker
   depends_on:
@@ -38,7 +36,7 @@ services:
    - HUB_HOST=hub
    - MODULE=search-module.xml
   volumes:
-   - ./search-resultChrome:/usr/share/udemy/test-output 
+   - .output/search-resultChrome:/usr/share/udemy/test-output 
  book-flight-moduleFF:
   image: meghana2013/seleium-docker
   depends_on:
@@ -49,7 +47,7 @@ services:
    - HUB_HOST=hub
    - MODULE=book-flight-module.xml
   volumes:
-   - ./book-resultFF:/usr/share/udemy/test-output    
+   - ./output/book-resultFF:/usr/share/udemy/test-output    
  book-flight-moduleChrome:
   image: meghana2013/seleium-docker
   depends_on:
@@ -60,4 +58,4 @@ services:
    - HUB_HOST=hub
    - MODULE=book-flight-module.xml
   volumes:
-   - ./book-resultChrome:/usr/share/udemy/test-output    
+   - ./output/book-resultChrome:/usr/share/udemy/test-output    
